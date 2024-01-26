@@ -1,0 +1,18 @@
+{
+    "editor.fontSize": 20,
+    "cmake.configureOnOpen": true,
+    "cmake.options.statusBarVisibility": "visible",
+    "explorer.confirmDelete": false,
+    "files.autoSave": "afterDelay",
+    "cmake.showOptionsMovedNotification": false,
+    "files.autoGuessEncoding": true,
+    "workbench.startupEditor": "none",
+    "workbench.iconTheme": "material-icon-theme",
+    "leetcode.endpoint": "leetcode-cn",
+    "leetcode.workspaceFolder": "d:\\Codes\\leetcode",
+    "editor.rulers": [
+        80,
+    ],
+    "Codegeex.Privacy": true,
+    "git.openRepositoryInParentFolders": "always"
+}
