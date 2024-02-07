@@ -8,8 +8,3 @@ for character in string:
     json.setdefault(character, 0)
     json[character] = json[character] + 1
 pprint.pprint(json)
-
-
-print("hello world")
-for i in range(20):
-    print("hello world")
