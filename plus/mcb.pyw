@@ -5,7 +5,9 @@
 # py.exe mcb.pyw list - 将所有关键字加载到剪贴板。
 
 
-import pyperclip, sys, shelve
+import pyperclip
+import sys
+import shelve
 
 shel_file = shelve.open("D:/Destok/MyGit/PythonLearning/plus/mcb")
 # TODO: 保存剪贴板的内容

@@ -19,6 +19,7 @@ for i in b:
 
 c = sheet['A']
 get_column_letter(a.column)
+column_index_from_string()
 a.value  # 学期'
 a.row  # 1
 a.column  # 2

@@ -2,6 +2,8 @@
 #! python3
 # mclip.py - A multi-clipboard program.
 
+import pyperclip
+import sys
 TEXT = {
     "agree": """Yes, I agree. That sounds fine to me.""",
     "busy": """Sorry, can we do this later this week or next week?""",
@@ -12,7 +14,6 @@ TEXT = {
 # 令行参数将存储在变量sys.argv 中
 
 # %%
-import sys
 
 
 if len(sys.argv) < 2:
@@ -28,7 +29,6 @@ keyphrase = sys.argv[1]  # first command line arg is the keyphrase
 # 如果keyphrase在字典中,则将值复制到剪贴板
 
 # %%
-import pyperclip
 
 if keyphrase in TEXT:
 

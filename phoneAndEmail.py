@@ -2,7 +2,8 @@
 # phoneAndEmail.py - Finds phone numbers and email addresses on the clipboard.
 
 # 导入pyperclip和re模块
-import pyperclip, re
+import re
+import pyperclip
 
 # 创建正则表达式，用于匹配电话号码
 phoneRegex = re.compile(
