@@ -1,15 +1,17 @@
 #! python3
 # mclip.py - A multi-clipboard program.
 
+# 导入sys模块和pyperclip模块
+import pyperclip
+import sys
+
+
 # 定义一个字典，用于存储文本
 TEXT = {
     "agree": """Yes, I agree. That sounds fine to me.""",
     "busy": """Sorry, can we do this later this week or next week?""",
     "upsell": """Would you consider making this a monthly donation?""",
 }
-
-# 导入sys模块和pyperclip模块
-import sys, pyperclip
 
 # 如果命令行参数小于2，则打印提示信息并退出
 if len(sys.argv) < 2:
