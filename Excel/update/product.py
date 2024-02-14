@@ -3,7 +3,7 @@
 
 import openpyxl
 
-wb = openpyxl.load_workbook("produceSales.xlsx")
+wb = openpyxl.load_workbook("./update/produceSales.xlsx")
 sheet = wb["Sheet"]
 
 # 农产品种类及其最新价格
@@ -17,6 +17,8 @@ for row_num in range(2, sheet.max_row):
     if product_name in PRICE_UPDATES:
         sheet.cell(row=row_num, column=2).value = PRICE_UPDATES[product_name]
 
+sheet.freeze_panes = "A3"  # 冻结窗格,第一行到此行
+
 print("Done...")
 
-wb.save("updatedProduceSales.xlsx")
+wb.save("./update/updatedProduceSales2.xlsx")
