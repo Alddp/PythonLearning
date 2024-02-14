@@ -41,6 +41,6 @@ for row in range(2, sheet.max_row):
 
 # TODO：打开一个新的文本文件，并将count_data的内容写入其中。
 print("Writing results...")
-with open("census2010.json", "w") as result:
-    result.write(pformat(count_data))
+with open("./census2010.py", "w", encoding="utf-8") as result:
+    result.write("result = " + pformat(count_data))
 print("Done...")
