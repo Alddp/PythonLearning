@@ -1,0 +1,74 @@
+# 从Python启动其他程序
+
+## subprocess模块
+
+- Python的`subprocess`模块可以让我们从Python程序中启动外部程序。`subprocess`模块中的`Popen`函数可以用来启动一个新的进程。
+
+```python
+import subprocess
+
+subprocess.Popen('C:\\Windows\\System32\\calc.exe')
+```
+
+- 在上述代码中，我们使用`Popen`函数来启动Windows计算器程序。这行代码会立即返回，而新启动的程序将在其自己的进程中运行。
+
+## Popen对象的方法
+
+- `Popen`函数返回一个`Popen`对象，该对象有两个有用的方法：`poll`和`wait`。
+
+- `poll`方法检查进程是否已经终止。如果进程仍在运行，`poll`方法返回`None`。如果进程已经终止，`poll`方法返回进程的退出代码。
+
+- `wait`方法等待进程终止。如果进程已经终止，`wait`方法立即返回进程的退出代码。如果进程仍在运行，`wait`方法阻塞直到进程终止。
+
+```python
+import subprocess
+
+calcProc = subprocess.Popen('c:\\Windows\\System32\\calc.exe')
+calcProc.poll() == None
+calcProc.wait()
+calcProc.poll()
+```
+
+## 向Popen()传递命令行参数
+
+- 如果要启动的程序需要命令行参数，我们可以将这些参数作为一个列表传递给`Popen`函数。
+
+```python
+import subprocess
+
+subprocess.Popen(['C:\\Windows\\notepad.exe', 'C:\\path\\to\\myFile.txt'])
+```
+
+- 在上述代码中，我们启动了记事本程序，并传递了一个命令行参数，该参数是我们希望记事本打开的文件的路径。
+
+## 用Python打开网站
+
+- Python的`webbrowser`模块提供了一个`open`函数，可以用来从Python程序中打开网页。
+
+```python
+import webbrowser
+
+webbrowser.open('http://inventwithpython.com/')
+```
+
+## 运行其他Python脚本
+
+- 我们可以使用`Popen`函数从Python程序中运行其他Python脚本。我们只需要将Python解释器的路径和脚本的路径作为参数传递给`Popen`函数即可。
+
+```python
+import subprocess
+
+subprocess.Popen(['C:\\Python38\\python.exe', 'hello.py'])
+```
+
+## 用默认的应用程序打开文件
+
+- 我们可以使用`Popen`函数以默认的应用程序打开文件。这类似于双击文件图标来打开文件。
+
+```python
+import subprocess
+
+subprocess.Popen(['start', 'hello.txt'], shell=True)
+```
+
+- 在上述代码中，我们使用`start`命令（在Windows上）来打开一个文本文件。这将以与双击文件相同的方式打开文件。
