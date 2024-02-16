@@ -1,7 +1,8 @@
 # ! python3
 # fast.py - quickly open repository from github with cmd
 # usage: --> github repositoryname
-import sys, webbrowser
+import sys
+import webbrowser
 
 if len(sys.argv) < 2:
     # print("请输入参数")
